@@ -1,0 +1,23 @@
+﻿<Window x:Class="BookStore.Windows.TemplatePdfCheck"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookStore.Windows"
+        mc:Ignorable="d"
+        Title="TemplatePdfCheck" Height="450" Width="800">
+    <Grid x:Name="gridTemplate">
+        <StackPanel x:Name="stackTemplate" HorizontalAlignment="Center" VerticalAlignment="Center">
+            
+            <TextBlock Text="{Binding Random, StringFormat=Электронный талон №{0}}" FontSize="24"/>
+            <TextBlock Text="{Binding Date, StringFormat=Дата заказа: dd.MM.yyyy}" FontSize="16"/>
+            <TextBlock Text="{Binding IdOrder, StringFormat=Номер заказа: 0}" FontSize="16"/>
+            <TextBlock Text="Информация о товарах в заказе:" FontSize="18"/>
+            <TextBlock Text="{Binding About, StringFormat=Информация о товарах в заказе: 0}" FontSize="16"/>
+            <TextBlock Text="{Binding FullCost, StringFormat=Итоговая стоимость: 0}" FontSize="16"/>
+            <TextBlock Text="{Binding Issue, StringFormat=Пункт выдачи: {0}}" FontSize="16"/>
+            <TextBlock Text="{Binding Code, StringFormat=Код получения: 0}" FontSize="16" FontWeight="Bold" FontStyle="Italic"/>
+            <TextBlock Text="{Binding DateDelivery, StringFormat=Срок доставки: 0 дня (дней)}" FontSize="16"/>
+        </StackPanel>
+    </Grid>
+</Window>
